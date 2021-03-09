@@ -17,7 +17,9 @@
           <td>{{ superhero.name }}</td>
           <td>{{ superhero.birth | moment("DD/MM/YYYY") }}</td>
           <td>
-            <button class="button is-primary" v-bind:class="{ 'is-loading' : isDeleting(superhero.id) }" @click="deleteSuperhero(superhero.id)">Delete</button>
+            <button class="button is-primary" v-bind:class="{ 'is-loading' : isDeleting(superhero.id) }"
+                    @click="deleteSuperhero(superhero.id)">Delete
+            </button>
           </td>
         </tr>
       </template>
@@ -31,7 +33,7 @@
 import axios from 'axios'
 import Vue from 'vue'
 import SuperheroForm from './SuperheroForm.vue'
-import { API_BASE_URL } from '../config'
+import { API_BASE_URL } from '@/config'
 
 export default {
   components: {
